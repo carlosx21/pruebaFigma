@@ -1,0 +1,7 @@
+{
+  "name": "prubaFullstack",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
