@@ -25,3 +25,21 @@
 #container a {
   text-decoration: none;
 }
+
+#title {
+  text-align: center;
+ 
+}
+
+.form-control:focus {
+  border-color: #28a745 !important;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+} 
+
+:host {
+  ion-input {
+      --border-color: white; // default underline color
+      --highlight-color-invalid: red; // invalid underline color
+      --highlight-color-valid: green; // valid underline color
+  }
+}

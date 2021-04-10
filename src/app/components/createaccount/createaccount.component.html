@@ -14,9 +14,9 @@
       <div class="row">
           <div class="col"></div>
           <div class="col">
-            <ion-button expand="block" color="light" class=" font-weight-bold border border border-dark">
+            <ion-button expand="block" color="dark" class=" font-weight-bold border border-dark">
               <ion-icon name="logo-google"></ion-icon>
-                &nbsp; Log in with Goole
+              &nbsp; Sign up with Goole
             </ion-button>
           </div>
           <div class="col"></div>
@@ -28,25 +28,15 @@
         </div>
         <div class="col"></div>
       </div>
-      <form [formGroup]="myForm" (ngSubmit)="actionFormHome()">
+      <br>
+      <form [formGroup]="formsacc" (ngSubmit)="actionFormAcc()">
           <div class="row">
             <div class="col"></div>
-            <div class="col">         
-                <ion-input style="border-width: 4px !important;" formControlName="email" class="form-control rounded border border-dark" placeholder="Email"></ion-input>          
-                <span style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+            <div class="col">          
+                <ion-input formControlName="name"  class=" border border-dark" placeholder="Email"></ion-input>         
+                <span style="color: red; text-align: center;" class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
                   Please provide your email.
-                </span>
-            </div>
-            <div class="col"></div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col"></div>
-            <div class="col">        
-                <ion-input style="border-width: 4px !important;" formControlName="password" class="form-control rounded border border-dark" placeholder="password" type="password"></ion-input>          
-                <span style="color: red;" class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
-                  Please provide your password.
-                </span>
+                </span> 
             </div>
             <div class="col"></div>
           </div>
@@ -54,32 +44,38 @@
           <div class="row">
             <div class="col"></div>
             <div class="col">
-              <ion-button type="submit" expand="block" color="dark" class=" font-weight-bold border border-dark">Log in </ion-button>
+                <ion-input formControlName="pass" class=" border border-dark" placeholder="password" type="password"></ion-input>
+                <span style="color: red; text-align: center;" class="error ion-padding" *ngIf="isSubmitted && errorControl.pass.errors?.required">
+                  Please set a password
+                </span> 
+                <span style="color: red; text-align: center;" class="error ion-padding" *ngIf="isSubmitted && errorControl.pass.errors?.minlength">
+                  Please set a password longer than seven characters.
+                </span> 
             </div>
             <div class="col"></div>
           </div>
-      </form>     
+          <br>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col">
+              <ion-button type="submit" expand="block" color="dark" class=" font-weight-bold border border-dark">Create account</ion-button>
+            </div>
+            <div class="col"></div>
+          </div>
+      </form>      
       <br>
       <div class="row">
         <div class="col"></div>
         <div class="col">          
-          <ion-router-link href="/#/saml"> Log in with SAML SSO </ion-router-link>
+          <ion-router-link href="/#/saml"> Sign up with SAML SSO</ion-router-link>
         </div>
         <div class="col"></div>
       </div>
       <br>
       <div class="row">
         <div class="col"></div>
-        <div class="col">
-          <ion-router-link href="/#/password"> Forgot password? </ion-router-link>
-        </div>
-        <div class="col"></div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          No account? <ion-router-link href="/#/account">Create one </ion-router-link>
+        <div class="col" >
+          Already have an account? <ion-router-link href="/#/home">Log in </ion-router-link>
         </div>
         <div class="col"></div>
       </div>

@@ -1,0 +1,90 @@
+<ion-header [translucent]="true" id="title">
+  <ion-toolbar color="dark">
+    <ion-title >
+      Figma
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <div id="container">
+
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          Tell us about yourself
+        </div>
+        <div class="col"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">          
+            <ion-input class=" border border-dark" placeholder="Your full name"></ion-input>         
+        </div>
+        <div class="col"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          <div class="dropdown">
+           
+          </div>
+        </div>
+        <div class="col">
+          <select class="custom-select" id="inputGroupSelect01">
+            <option value="" disabled selected>What kind of work do you do? *</option>
+            <option value="pm">Product Management</option>
+            <option value="mk">Marketing</option>
+            <option value="ds">Design</option>
+            <option value="sd">Software Developement</option>
+            <option value="ot">Other</option>
+          </select>
+        </div>
+        <div class="col"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col" style="text-align: left;">         
+          <ion-checkbox class=" font-weight-bold border border-dark" color="primary" checked slot="start"></ion-checkbox>
+          <ion-label>&nbsp; I agree to join Figma's mailing list</ion-label>
+        </div>
+        <div class="col"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <ion-button expand="block" color="dark" class=" font-weight-bold border border-dark">Create account</ion-button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          By clicking "Create account" you agree to our 
+        <ion-router-link target="_blank" href="https://www.figma.com/summary-of-policy/">TOS</ion-router-link> and 
+        <ion-router-link target="_blank" href="https://www.figma.com/privacy/">Privacy Policy</ion-router-link>
+        </div>
+        <div class="col"></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          Already have an account? <ion-router-link href="/#/home">Log in </ion-router-link>
+        </div>
+        <div class="col"></div>
+      </div>
+    
+      
+    </div>
+  
+  
+  </div>
+</ion-content>
+

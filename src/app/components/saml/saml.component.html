@@ -1,0 +1,56 @@
+<ion-header [translucent]="true" id="title">
+  <ion-toolbar color="dark" >
+    <ion-title >
+      Log in with SAML SSO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <div id="container">
+
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          Log in to Figma with SAML SSO 
+        </div>
+        <div class="col"></div>
+      </div>
+      <br>
+      <form [formGroup]="formsaml" (ngSubmit)="actionFormSaml()">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">   
+              <span style="color: red; text-align: center;" class="error ion-padding" *ngIf="isSubmitted && badMail">
+                Your account is not configured to use SAML SSO. Please log in with Google or a password.
+              </span>       
+              <ion-input formControlName="name"  class="border border-dark" placeholder="Email"></ion-input>          
+          </div>
+          <div class="col"></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">          
+            <ion-button [disabled]="!formsaml.valid" type="submit" expand="block" color="dark" class=" font-weight-bold border border-dark">Log in </ion-button>
+          </div>
+          <div class="col"></div>
+        </div>
+      </form>
+      <br>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">          
+          <ion-router-link href="/#/home"> Log in with Google or a password </ion-router-link>
+        </div>
+        <div class="col"></div>
+      </div>
+      
+    </div>
+  
+  
+  </div>
+</ion-content>
+
